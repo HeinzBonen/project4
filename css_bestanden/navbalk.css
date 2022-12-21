@@ -1,0 +1,18 @@
+/*
+ *   Copyright (c) 2022 
+ *   All rights reserved.
+ */
+ /* Stijlen van de applicatie balk */
+    .navigatieplaatsen {
+        margin-right: 5%;
+    }
+
+    .navloguit {
+        position: absolute;
+        margin-left: 90%;
+        background-color: darkslategray;
+        color: white;
+        border-radius: 20px;
+        padding: 20px;
+    }
+/* Einde */

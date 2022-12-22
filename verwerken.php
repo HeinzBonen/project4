@@ -103,14 +103,20 @@ $conn->close();
             margin-top: 5%;
             background-color: green;
             padding: 5%;
-            border-radius: 20%;
+            border-radius: 5%;
+            margin-left: 5%;
         }
     </style>
 
 
-
-    <p class="succes">Test</p>
-
+    <div class="succes">
+        <h>Het volgende product is succesvol toegevoegd aan de database:</h>
+        <p>Naam: <?php echo $pnaam; ?></p>
+        <p>Merk: <?php echo $pmerk; ?></p>
+        <p>Serienummer: <?php echo $pserienummer; ?></p>
+        <p>Type: <?php echo $ptype; ?></p>
+        <p>Staat: <?php echo $pstaat; ?></p>
+    </div>
 </body>
 
 </html>

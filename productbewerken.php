@@ -52,6 +52,14 @@
     <input type="submit" name="toevoegen" value="Product toevoegen">
 </form>
 </div>
- 
+<br><br>
+<h>Product verwijderen</h>
+<form action="verwerkenverwijderen.php" method="post" id="availability-form">
+<fieldset>
+      <span><label>Product ID: </label><input type="text" name="delID" id="delID" required /></span>
+      <br>
+    </fieldset>
+    <input type="submit" name="verwijderen" value="Product verwijderen z4">
+  </form>
 </body>
 </html>

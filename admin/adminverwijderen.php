@@ -28,7 +28,6 @@ echo $conn->error;
 <br><br>
 <input type="submit" name= "verwijderadmin" value="verwijder">
 
-
 <?php
 
 if($_SERVER['REQUEST_METHOD'] == 'GET'){

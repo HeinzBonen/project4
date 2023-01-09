@@ -1,0 +1,14 @@
+/*
+ *   Copyright (c) 2022 
+ *   All rights reserved.
+ */
+ /* foute inlog*/
+.roodblok {
+    position: absolute;
+    margin-left: 14%;
+    margin-top: -6%;
+    background-color: red;
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+}

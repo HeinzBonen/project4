@@ -6,6 +6,8 @@ include("db.php");
 
 ?>
 <title>login</title>
+<link rel="stylesheet" href="css_bestanden/loginfout.css">
+
 <p> vul hier uw gegevens in om in te loggen: </p>
 <!--login form-->
 <form method="POST" name="form">
@@ -41,13 +43,13 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
     if (empty($email)) {
 
-        echo "Vul uw email in.";
+        echo "<div class=roodblok;>Vul uw email in.</div>";
 
         exit();
 
     }else if(empty($password)){
 
-        echo "Vul uw wachtwoord in.";
+        echo "<div class=roodblok;>Vul uw wachtwoord in.</div>";
 
         exit();
 
@@ -81,7 +83,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
             }else{
 
-                echo "U heeft een verkeerd wachtwoord of email ingevuld.";
+                echo "<div class=roodblok>U heeft een verkeerd wachtwoord of email ingevuld.</div>";
 
                 session_destroy();
 
@@ -91,7 +93,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
         }else{
 
-            echo "U heeft een verkeerd wachtwoord of email ingevuld. schaap";
+            echo "<div class=roodblok>U heeft een verkeerd wachtwoord of email ingevuld.</div>";
 
             session_destroy();
 

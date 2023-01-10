@@ -76,7 +76,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
                 $_SESSION['id'] = $row['id'];
 
-                header("Location: test.php");
+                header("Location: admin/adminfuncties.php");
 
                 exit();
             

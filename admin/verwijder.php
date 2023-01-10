@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     }elseif($_POST['nee']){
         //return to adminfuncties
-        echo "koe";
+        header("Location:adminfuncties.php");
     }
 }
 

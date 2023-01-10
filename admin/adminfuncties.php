@@ -112,6 +112,22 @@ if (strlen($_POST['password']) < 6) {
         <span><label>Product staat: </label><input type="text" name="pstaat" id="pstaat" required /></span>
         <br>
       </fieldset>
+      <fieldset>
+        <span><label>(optioneel)Foto product: </label><select name="pfoto" id="pfoto">
+            <option value="">- selecteer -</option>
+            <?php
+            $fileList = glob('../fotos/*');
+            foreach($fileList as $filename){
+                if(is_file($filename)){
+                    echo '<option>'; echo substr($filename, 9); echo'</option>'; 
+                }   
+            }
+            ?>        
+        </option>
+            </select>
+        </span>
+        <br>
+      </fieldset>
 
       <fieldset>
         <span>

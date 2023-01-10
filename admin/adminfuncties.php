@@ -161,7 +161,7 @@ if (strlen($_POST['password']) < 6) {
 
 </body>
 
-<div style="position: absolute; left: ; top: 18%; height: auto; width: 29%; border-radius:2px; border: 2px solid black;"> 
+<div style="position: absolute; top: 18%; height: auto; width: 29%; border-radius:2px; border: 2px solid black;"> 
 <br><p>Wachtwoord opnieuw instellen:</p>
 <form method="GET" action="" name= "form2">
 

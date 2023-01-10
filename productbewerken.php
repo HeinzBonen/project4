@@ -14,11 +14,10 @@
     .ptoevoegen {
       position: absolute;
       text-align: right;
-      margin-left: 40%;
     }
   </style>
   <div class="ptoevoegen">
-  <h>Apparatuur toevoegen</h>
+    <h>Apparatuur toevoegen</h>
     <form action="verwerken.php" method="post" id="availability-form">
       <fieldset>
         <span><label>Product naam: </label><input type="text" name="pnaam" id="pnaam" required /></span>
@@ -51,33 +50,30 @@
             <option>Reparatie - Niet beschikbaar</option>
           </select>
         </span>
-        <br><br>
+      </fieldset>
     </form>
     <input type="submit" name="toevoegen" value="Product toevoegen">
   </div>
-    <style>
-      .pverwijderen {
-        position: absolute;
-        text-align: right;
-        margin-top: 18%;
-      }
-      
-      .tekstapparatuurverwijderen {
-        position: absolute;
-        margin-top: 16%;
-      }
-    </style>
+
+  <style>
+    .pverwijderen {
+      position: absolute;
+      text-align: right;
+      margin-top: 11%;
+      margin-left: 25%;
+    }
+  </style>
 
   <br><br>
-  <h class="tekstapparatuurverwijderen">Apparatuur verwijderen</h>
   <div class="pverwijderen">
-  <form action="verwerkenverwijderen.php" method="post" id="availability-form">
-    <fieldset>
-      <span><label>Product ID: </label><input type="text" name="delID" id="delID" required /></span>
-      <br>
-    </fieldset>
-    <input type="submit" name="verwijderen" value="Toewijzen">
-  </form>
+  <h>Apparatuur verwijderen</h>
+    <form action="verwerkenverwijderen.php" method="post" id="availability-form">
+      <fieldset>
+        <span><label>Product ID: </label><input type="text" name="delID" id="delID" required /></span>
+        <br>
+      </fieldset>
+      <input type="submit" name="verwijderen" value="Toewijzen">
+    </form>
   </div>
 </body>
 

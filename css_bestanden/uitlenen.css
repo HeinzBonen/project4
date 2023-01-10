@@ -40,3 +40,7 @@ table .right{
   right: 0px;
   top: 0;
 }
+
+form input{
+  font-size: 0.9vw;
+}

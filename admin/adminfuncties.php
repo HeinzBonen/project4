@@ -114,7 +114,7 @@ if (strlen($_POST['password']) < 6) {
       </fieldset>
         <!--select photo-->
       <fieldset>
-        <span><label>(optioneel)Foto product: </label><select name="pfoto" id="pfoto" onchange="fotofunctie()">
+      <span><label>(optioneel)Foto product: </label><select name="pfoto" id="pfoto" onchange="fotofunctie()">
             <option value="">- selecteer -</option>
             <?php
             $fileList = glob('../fotos/*');
@@ -126,12 +126,16 @@ if (strlen($_POST['password']) < 6) {
             ?>        
         </option>
             </select>
+
             <p id="demo"></p>
+            <div id="bemo"></div>
 
             <script>
                 function fotofunctie() {
-                var x = document.getElementById("pfoto").value;
-                document.getElementById("demo").innerHTML = "You selected: " + x;
+                var a = document.getElementById("pfoto").value;
+                document.getElementById("demo").innerHTML = "Geselecteerde foto: " + a;
+                var b = "../fotos/" + document.getElementById("pfoto").value;
+                document.getElementById("bemo").innerHTML = "<img style='height: 200px;' src="+b+">";
                 }
             </script>
 
@@ -181,7 +185,7 @@ echo "";
 $query = "SELECT id,email FROM beheerders ";
 if($r_set=$conn->query($query)) {
 
-echo "<SELECT name=email class='form-control' style='width:200px;'>";
+echo "<SELECT name=email class='form-control' style='width:200px;'><option>-selecteer beheerder -</option>";
 
 while($row=$r_set->fetch_assoc()) {
 echo "<option value=$row[id]>$row[email]</option>";
@@ -225,7 +229,7 @@ echo "";
 $query = "SELECT id,email FROM beheerders ";
 if($r_set=$conn->query($query)) {
 
-echo "<SELECT name=email class='form-control' style='width:200px;'>";
+echo "<SELECT name=email class='form-control' style='width:200px;'><option>-selecteer beheerder -</option>";
 
 while($row=$r_set->fetch_assoc()) {
 echo "<option value=$row[id]>$row[email]</option>";

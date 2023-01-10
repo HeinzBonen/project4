@@ -30,7 +30,7 @@ include("../db.php");
 <body>
 
 <!--div voor links-->
-<div style="position: absolute; left: 70%; top: 18%; height: 70%; width: 30%;"> 
+<div style="position: absolute; left: 70%; top: 18%; height: auto; width: 29%; border-radius:2px; border: 2px solid black;"> 
 <p>Voeg nieuwe beheerder toe:</p>
 <form method="POST" name="form1">
     <input required type="email" name="email" placeholder="email-adres..."><br>
@@ -79,10 +79,73 @@ if (strlen($_POST['password']) < 6) {
 }
 }
 ?>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product bewerken</title>
+</head>
+
+<body>
+
+  <div>
+  <h>Apparatuur toevoegen</h>
+    <form action="verwerken.php" method="post" id="availability-form">
+      <fieldset>
+        <span><label>Product naam: </label><input type="text" name="pnaam" id="pnaam" required /></span>
+        <br>
+      </fieldset>
+      <fieldset>
+        <span><label>Product merk: </label><input type="text" name="pmerk" id="pmerk" required /></span>
+        <br>
+      </fieldset>
+      <fieldset>
+        <span><label>Product serienummer </label><input type="text" name="pserienummer" id="pserienummer" required /></span>
+        <br>
+      </fieldset>
+      <fieldset>
+        <span><label>Product type: </label><input type="text" name="ptype" id="ptype" required /></span>
+        <br>
+      </fieldset>
+      <fieldset>
+        <span><label>Product staat: </label><input type="text" name="pstaat" id="pstaat" required /></span>
+        <br>
+      </fieldset>
+
+      <fieldset>
+        <span>
+          <label>Product Status</label>
+          <select name="pstatus" id="pstatus" required>
+            <option value="">- selecteer -</option>
+            <option>Beschikbaar</option>
+            <option>Niet beschikbaar</option>
+            <option>Reparatie - Niet beschikbaar</option>
+          </select>
+        </span>
+        <br><br>
+    </form>
+    <input type="submit" name="toevoegen" value="Product toevoegen">
+  </div>
+  
+  <h>Apparatuur verwijderen</h>
+  <div>
+  <form action="verwerkenverwijderen.php" method="post" id="availability-form">
+    <fieldset>
+      <span><label>Product ID: </label><input type="text" name="delID" id="delID" required /></span>
+      <br>
+    </fieldset>
+    <input type="submit" name="verwijderen" value="Toewijzen">
+  </form>
+  </div>
+</body>
+
+
 </div>
 
 </body>
 
+<div style="position: absolute; left: ; top: 18%; height: auto; width: 29%; border-radius:2px; border: 2px solid black;"> 
 <br><p>Wachtwoord opnieuw instellen:</p>
 <form method="GET" action="" name= "form2">
 
@@ -159,3 +222,4 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     }
 }
 ?>  
+</div>

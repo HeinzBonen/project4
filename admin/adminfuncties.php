@@ -112,8 +112,9 @@ if (strlen($_POST['password']) < 6) {
         <span><label>Product staat: </label><input type="text" name="pstaat" id="pstaat" required /></span>
         <br>
       </fieldset>
+        <!--select photo-->
       <fieldset>
-        <span><label>(optioneel)Foto product: </label><select name="pfoto" id="pfoto">
+        <span><label>(optioneel)Foto product: </label><select name="pfoto" id="pfoto" onchange="fotofunctie()">
             <option value="">- selecteer -</option>
             <?php
             $fileList = glob('../fotos/*');
@@ -125,6 +126,15 @@ if (strlen($_POST['password']) < 6) {
             ?>        
         </option>
             </select>
+            <p id="demo"></p>
+
+            <script>
+                function fotofunctie() {
+                var x = document.getElementById("pfoto").value;
+                document.getElementById("demo").innerHTML = "You selected: " + x;
+                }
+            </script>
+
         </span>
         <br>
       </fieldset>
